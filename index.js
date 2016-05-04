@@ -78,6 +78,6 @@ client.on(RTM_EVENTS.MESSAGE, function (message) {
             }
         }
     } catch (error) {
-        console.log(e.stack);
+        console.log(error.stack);
     }
 });
