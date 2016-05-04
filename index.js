@@ -28,7 +28,7 @@ client.on(RTM_EVENTS.MESSAGE, function (message) {
     if (!_.has(channels, message.channel)) {
         channels[message.channel] = {
             active: {},
-            timeout: 15 * 1000
+            timeout: 15 * 60 * 1000
         };
     }
 
