@@ -25,6 +25,8 @@ client.on(CLIENT_EVENTS.RTM.AUTHENTICATED, function (data) {
 });
 
 client.on(RTM_EVENTS.MESSAGE, function (message) {
+    if (message.user === myself) return;
+
     if (!_.has(channels, message.channel)) {
         channels[message.channel] = {
             active: {},
